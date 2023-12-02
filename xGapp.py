@@ -289,35 +289,15 @@ elif mode == "***Sprawdzić konkretny mecz***":
     # UI
     url = st.text_input("""Podaj link do meczu ze strony FBREF.com z ligi angielskiej, włoskiej, hiszpańskiej, niemieckiej, francuskiej, portugalskiej lub holenderskiej""",
                         'Wklej link tutaj')
-            
+    df = collect_fbref_shots("https://fbref.com/en/matches/9f48a584/Benfica-Porto-September-29-2023-Primeira-Liga")
+    if df:
+        st.write(df)       
 #execution
     if 'fbref' in url:
         try:
             option = 'fbref'
             data_load_state = st.text('Pobieranie danych...') #UI
-            #fbref_data = collect_fbref_shots(url)
-            def try_caption(a):
-                try:
-                    return(a.find('caption').get_text())
-                except:
-                    return('None')
-
-            res = requests.get(url)
-            st.write("request done")
-            soup = BeautifulSoup(res.content, 'lxml')
-            st.write("soup done")
-            tables = soup.find_all('table')
-            st.write("tables found")
-            table_names = [try_caption(tab) for tab in tables]
-            st.write("captions done")
-            pandas_tables = pd.read_html(url)
-            st.write("pandas collected")
-            shots_table = [pandas_tables[i] for i in range(len(table_names)) if table_names[i] == 'Shots Table'][0]
-            st.write("shots collected")
-            shots_table.columns = [f'{x[0]} {x[1]}' if "Unnamed" not in x[0] else x[1] for x in shots_table.columns]
-            st_Write("columns renamed")
-            shots_table = shots_table[~shots_table.Player.isnull()][['Minute', 'Player', 'Squad', 'xG', 'Outcome']]
-            st_Write("shots final")
+            fbref_data = collect_fbref_shots(url)
 
             xg_dict = take_xG_from_df(fbref_data)
 
