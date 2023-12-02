@@ -135,7 +135,8 @@ def random_shots(xg_total, N_shots):
 
 ##################################################################################
 with st.sidebar:
-    st.write(str(os.getcwd()))
+    for i in os.listdir:
+        st.write(str(i))
     #try:
     #    st.image("/mount/src/xgapp/Logo2.png")
     #except:
