@@ -156,17 +156,17 @@ with st.sidebar:
     col1, col2 = st.columns(2)
     with col1:
         st.subheader("[facebook](https://www.facebook.com/ofutbolustatystycznie/)")
-        #try:
-        #    st.image("/mount/src/xgapp/Facebook_Logo_Primary.png")
-        #except:
-        #    st.image("./Facebook_Logo_Primary.png")
+        try:
+            st.image("/mount/src/xgapp/Facebook_Logo_Primary.png")
+        except:
+            st.image("./Facebook_Logo_Primary.png")
 
     with col2:
         st.subheader("[X/Twitter](https://twitter.com/OFutboluStat)")
-        #try:
-        #    st.image("/mount/src/xgapp/X-logo-black.png")
-        #except:
-        #    st.image("./X-logo-black.png")
+        try:
+            st.image("/mount/src/xgapp/X-logo-black.png")
+        except:
+            st.image("./X-logo-black.png")
 
 
 # koniec sidebara
