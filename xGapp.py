@@ -289,9 +289,9 @@ elif mode == "***Sprawdzić konkretny mecz***":
     # UI
     url = st.text_input("""Podaj link do meczu ze strony FBREF.com z ligi angielskiej, włoskiej, hiszpańskiej, niemieckiej, francuskiej, portugalskiej lub holenderskiej""",
                         'Wklej link tutaj')
-    dx = requests.get("https://fbref.com/en/matches/9f48a584/Benfica-Porto-September-29-2023-Primeira-Liga")
-    if dx:
-        st.write(str(dx) )      
+    #dx = requests.get("https://fbref.com/en/matches/9f48a584/Benfica-Porto-September-29-2023-Primeira-Liga")
+    #if dx:
+    #    st.write(str(dx) )      
 #execution
     if 'fbref' in url:
         try:
