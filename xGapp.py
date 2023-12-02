@@ -134,7 +134,11 @@ def random_shots(xg_total, N_shots):
 
 ##################################################################################
 with st.sidebar:
-    st.image("./Logo2.png")
+    try:
+        st.image("/mount/src/xgapp/Logo2.png")
+    except:
+        st.image("./Logo2.png")
+        
     st.markdown("_Instrukcje_: Co mogę tu zrobić?")
     st.markdown("Jesteś w aplikacji, która umożliwia testowanie, analizę i zrozumienie w jaki sposób różnego rodzaju sytuacje bramkowe przekładają się na oczekiwane punkty (xPTS), prawdopodobieństwo zwycięstwa, a także prawdopodobieństwo konkretnych wyników.")
     mode = st.radio(
