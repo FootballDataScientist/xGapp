@@ -8,6 +8,7 @@ import numpy as np
 from bs4 import BeautifulSoup, Comment
 import requests
 import seaborn as sns
+import os
 
 #functions
 def sim_goals_from_individual_xG(xg1, xg2, n_simulations, seed = None):
@@ -134,10 +135,11 @@ def random_shots(xg_total, N_shots):
 
 ##################################################################################
 with st.sidebar:
-    try:
-        st.image("/mount/src/xgapp/Logo2.png")
-    except:
-        st.image("./Logo2.png")
+    os.getcwd()
+    #try:
+    #    st.image("/mount/src/xgapp/Logo2.png")
+    #except:
+    #    st.image("./Logo2.png")
         
     st.markdown("_Instrukcje_: Co mogę tu zrobić?")
     st.markdown("Jesteś w aplikacji, która umożliwia testowanie, analizę i zrozumienie w jaki sposób różnego rodzaju sytuacje bramkowe przekładają się na oczekiwane punkty (xPTS), prawdopodobieństwo zwycięstwa, a także prawdopodobieństwo konkretnych wyników.")
@@ -153,17 +155,17 @@ with st.sidebar:
     col1, col2 = st.columns(2)
     with col1:
         st.subheader("[facebook](https://www.facebook.com/ofutbolustatystycznie/)")
-        try:
-            st.image("/mount/src/xgapp/Facebook_Logo_Primary.png")
-        except:
-            st.image("./Facebook_Logo_Primary.png")
+        #try:
+        #    st.image("/mount/src/xgapp/Facebook_Logo_Primary.png")
+        #except:
+        #    st.image("./Facebook_Logo_Primary.png")
 
     with col2:
         st.subheader("[X/Twitter](https://twitter.com/OFutboluStat)")
-        try:
-            st.image("/mount/src/xgapp/X-logo-black.png")
-        except:
-            st.image("./X-logo-black.png")
+        #try:
+        #    st.image("/mount/src/xgapp/X-logo-black.png")
+        #except:
+        #    st.image("./X-logo-black.png")
 
 
 # koniec sidebara
