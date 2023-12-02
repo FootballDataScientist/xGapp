@@ -296,6 +296,7 @@ elif mode == "***Sprawdzić konkretny mecz***":
             option = 'fbref'
             data_load_state = st.text('Pobieranie danych...') #UI
             fbref_data = collect_fbref_shots(url)
+            st_Write("shots collected")
 
             xg_dict = take_xG_from_df(fbref_data)
 
