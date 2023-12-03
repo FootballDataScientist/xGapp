@@ -287,8 +287,8 @@ if mode == "***Potestować wymyślone xG indywidualnych strzałów***":
 elif mode == "***Sprawdzić konkretny mecz***":
     
     # UI
-    url = st.text_input("""Podaj link do meczu ze strony FBREF.com z ligi angielskiej, włoskiej, hiszpańskiej, niemieckiej, francuskiej, portugalskiej lub holenderskiej""",
-                        'Wklej link tutaj')
+    url = st.text_input("""Podaj link do meczu ze strony FBREF.com, dla którego dostępne jest xG""",
+                        'Wklej link tutaj', help = 'xG jest dostępne dla najlepszych lig męskich, europejskich pucharów, a także kilku lig kobiecych')
 
 #execution
     if 'fbref' in url:
