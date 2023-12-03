@@ -289,12 +289,7 @@ elif mode == "***Sprawdzić konkretny mecz***":
     # UI
     url = st.text_input("""Podaj link do meczu ze strony FBREF.com z ligi angielskiej, włoskiej, hiszpańskiej, niemieckiej, francuskiej, portugalskiej lub holenderskiej""",
                         'Wklej link tutaj')
-    res = requests.get("https://fbref.com/en/matches/9f48a584/Benfica-Porto-September-29-2023-Primeira-Liga")
-    if res:
-        st.write(str(res) )  
-    soup = BeautifulSoup(res.content, 'lxml')
-    if soup:
-        st.write("soup: ", str(soup))    
+
 #execution
     if 'fbref' in url:
         try:
