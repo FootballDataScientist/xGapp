@@ -288,7 +288,7 @@ elif mode == "***Sprawdzić konkretny mecz***":
     
     # UI
     url = st.text_input("""Podaj link do meczu ze strony FBREF.com, dla którego dostępne jest xG""",
-                        'Wklej link tutaj', help = 'xG jest dostępne dla najlepszych lig męskich, europejskich pucharów, a także kilku lig kobiecych')
+                        'Wklej link tutaj', help = 'xG jest dostępne dla najlepszych lig męskich, europejskich pucharów, a także kilku lig kobiecych. Pełną listę znajdziesz na [https://fbref.com/en/expected-goals-model-explained/](https://fbref.com/en/expected-goals-model-explained/)')
 
 #execution
     if 'fbref' in url:
